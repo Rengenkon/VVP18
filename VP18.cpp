@@ -58,11 +58,18 @@ public:
 
     void svap() {
         int r = 0;
-        for (int i = 1; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             r = a[i];
             a[i] = b[i];
             b[i] = r;
         }
+    }
+
+    void test() {
+        std::cout << "\n\nЗадача 1\n";
+        print_arr();
+        svap();
+        print_arr();
     }
 };
 
@@ -122,6 +129,13 @@ public:
             b[i] = (double)med(0, i)/(i+1);
         }
     }
+
+    void test() {
+        std::cout << "\n\nЗадача 2\n";
+        print_arr_a();
+        mm();
+        print_arr_b();
+    }
 };
 
 class z3
@@ -166,6 +180,13 @@ public:
                 a[i] = a[i] + c;
             }
         }
+    }
+
+    void test() {
+        std::cout << "\n\nЗадача 3\n";
+        print_arr();
+        np();
+        print_arr();
     }
 };
 
@@ -231,6 +252,13 @@ public:
             a[i] = 0;
         }
     }
+
+    void test() {
+        std::cout << "\n\nЗадача 4\n";
+        print_arr();
+        np();
+        print_arr();
+    }
 };
 
 class z5
@@ -274,6 +302,13 @@ public:
             i++;
         }
     }
+
+    void test() {
+        std::cout << "\n\nЗадача 5\n";
+        print_arr();
+        np();
+        print_arr();
+    }
 };
 
 
@@ -281,11 +316,17 @@ int main()
 {
     setlocale(LC_ALL, "rus");
 
-    z5 first;
-    first.print_arr();
-    first.np();
-    first.print_arr();
+    z1 first;
+    z2 second;
+    z3 third;
+    z4 fourth;
+    z5 fifth;
 
-    std::cout << "Hello World!\n";
+    first.test();
+    second.test();
+    third.test();
+    fourth.test();
+    fifth.test();
+
     return 0;
 }
